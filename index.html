@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mali0125 - Midterm Project</title>
+    <!-- Links a handwriting Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+    <!-- Links a CSS stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Creates skip links to improve accessibility, and provide a better user experience for everyone -->
+        <ul role="list" class="skip-links">
+            <li role="listitem"><a href="#nav" aria-label="Skip to the main navigation">Skip to main nav</a></li>
+            <li role="listitem"><a href="#main" aria-label="Skip to the main content">Skip to main content</a></li>
+        </ul>
+        <header role="banner">
+            <!-- Creates a div for the logo so that it can be centered -->
+            <div class="logo">
+                <picture>
+                    <source
+                        srcset=
+                            "images/logo-320_x_208.png,
+                            images/logo-640_x_417.png 2x"
+                        media="(max-width: 320px)"/>
+                    <source
+                        srcset=
+                            "images/logo-720_x_470.png,
+                            images/logo-1440_x_939.png 2x"
+                        media="(max-width: 720px)"/>
+                    <source
+                        srcset=
+                            "images/logo-1280_x_834.png,
+                            images/logo-2560_x_1669.png 2x"
+                        media="(min-width: 1280px)"/>
+                    <source
+                        srcset=
+                            "images/logo-960_x_625.png,
+                            images/logo-1920_x_1252.png 2x"
+                        media="(min-width: 960px)"/>
+                    <!-- Creates an id for the logo to specify its' position and allow it to be displayed on top of the banner image -->
+                    <img 
+                        id=logo 
+                        src="images/logo.png" 
+                        role="img"
+                        alt="logo">
+                </picture>
+            </div>
+            <picture>
+                <source
+                    srcset=
+                        "images/banner-320_x_180.jpg,
+                        images/banner-640_x_360.jpg 2x"
+                    media="(max-width: 320px)"/>
+                <source
+                    srcset=
+                        "images/banner-720_x_405.jpg,
+                        images/banner-1440_x_810.jpg 2x"
+                    media="(max-width: 720px)"/>
+                <source
+                    srcset=
+                        "images/banner-1280_x_720.jpg,
+                        images/banner-2560_x_1440.jpg 2x"
+                    media="(min-width: 1280px)"/>
+                <source
+                    srcset=
+                        "images/banner-960_x_540.jpg,
+                        images/banner-1920_x_1080.jpg 2x"
+                    media="(min-width: 960px)"/>        
+                <img 
+                    src="images/banner.jpg" 
+                    role="img"
+                    alt="site banner displaying bread">
+            </picture>
+            <nav role="navigation" id="nav">
+                <ul role="list">
+                    <li role="listitem"><a href="index.html" aria-label="View the Home page">Home</a></li>
+                    <li role="listitem"><a href="about.html" aria-label="View the About page">About</a></li>
+                    <li role="listitem"><a href="cakes.html" aria-label="View the Cakes/Pastries page">Cakes/Pastries</a></li>
+                    <li role="listitem"><a href="#" aria-label="View the Biscuits page">Biscuits</a></li>
+                    <li role="listitem"><a href="#" aria-label="View the Bread page">Bread</a></li>
+                    <li role="listitem"><a href="#" aria-label="View the Contact page">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main role="main" id="main">
+            <!-- The welcome portion contains information that users would want to see first -->
+            <article role="article">
+                <h1 role="heading">Welcome</h1>
+                <p role="paragraph">Welcome to Pâtisserie Classique. Our bakery specializes in a variety of baked goods that range from sweet to savoury. We sell products that are fresh and expertly prepared with authentic recipes. There are many options to choose from, including flavours for every mood. Specialty products with high nutritional value, including gluten-free alternatives are available at Pâtisserie Classique, so that everyone can enjoy!</p>
+            </article>
+            <!-- The products are related to the information from the welcome article, so they will be displayed in sections. Each section will contain a short description, a relevant image, and a button to enhance user experience -->
+            <section class="services">
+                <picture>
+                    <source
+                        srcset=
+                            "images/chocolate-cake-320_x_240.jpg,
+                            images/chocolate-cake-640_x_480.jpg 2x"
+                        media="(max-width: 320px)"/>
+                    <source
+                        srcset=
+                            "images/chocolate-cake-720_x_540.jpg,
+                            images/chocolate-cake-1440_x_1080.jpg 2x"
+                        media="(max-width: 720px)"/>
+                    <source
+                        srcset=
+                            "images/chocolate-cake-1280_x_960.jpg,
+                            images/chocolate-cake-2560_x_1920.jpg 2x"
+                        media="(min-width: 1280px)"/>
+                    <source
+                        srcset=
+                            "images/chocolate-cake-960_x_720.jpg,
+                            images/chocolate-cake-1920_x_1440.jpg 2x"
+                        media="(min-width: 960px)"/>
+                    <img 
+                        src="images/chocolate-cake.jpg" 
+                        role="img"
+                        alt="slice of chocolate cake on a plate">
+                </picture>
+                <h2 role="heading">Cakes/Pastries</h2>
+                <p role="paragraph">We have a variety of delicious cakes and pastries that are made with love and care. They come in many flavours such as chocolate, vanilla, lemon, and more!</p>
+                <a href="cakes.html">Learn more</a> 
+            </section>
+            <section class="services">
+                <picture>
+                    <source
+                        srcset=
+                            "images/biscuits-320_x_240.jpg,
+                            images/biscuits-640_x_480.jpg 2x"
+                        media="(max-width: 320px)"/>
+                    <source
+                        srcset=
+                            "images/biscuits-720_x_540.jpg,
+                            images/biscuits-1440_x_1080.jpg 2x"
+                        media="(max-width: 720px)"/>
+                    <source
+                        srcset=
+                            "images/biscuits-1280_x_960.jpg,
+                            images/biscuits-2560_x_1920.jpg 2x"
+                        media="(min-width: 1280px)"/>
+                    <source
+                        srcset=
+                            "images/biscuits-960_x_720.jpg,
+                            images/biscuits-1920_x_1440.jpg 2x"
+                        media="(min-width: 960px)"/>
+                    <img 
+                        src="images/biscuits.jpg" 
+                        role="img"
+                        alt="two cookies on a counter">
+                </picture>
+                <h2 role="heading">Biscuits</h2>
+                <p role="paragraph">Enjoy these biscuits that come in a variety of unique flavours and sizes. From chocolate chip to oatmeal, there are a number of options to choose from!</p>
+                <a href="#">Learn more</a>  
+            </section>
+            <section class="services">
+                <picture>
+                    <source
+                        srcset=
+                            "images/bread-basket-320_x_240.jpg,
+                            images/bread-basket-640_x_480.jpg 2x"
+                        media="(max-width: 320px)"/>
+                    <source
+                        srcset=
+                            "images/bread-basket-720_x_540.jpg,
+                            images/bread-basket-1440_x_1080.jpg 2x"
+                        media="(max-width: 720px)"/>
+                    <source
+                        srcset=
+                            "images/bread-basket-1280_x_960.jpg,
+                            images/bread-basket-2560_x_1920.jpg 2x"
+                        media="(min-width: 1280px)"/>
+                    <source
+                        srcset=
+                            "images/bread-basket-960_x_720.jpg,
+                            images/bread-basket-1920_x_1440.jpg 2x"
+                        media="(min-width: 960px)"/>
+                    <img 
+                        src="images/bread-basket.jpg" 
+                        role="img"
+                        alt="assorted bread in a basket">
+                </picture>
+                <h2 role="heading">Bread</h2>
+                <p role="paragraph">Our bread is fresh, soft, and expertly prepared. There are many options available, including sweet bread, Italian, French baguettes, and so much more!</p>
+                <a href="#">Learn more</a>  
+            </section>
+        </main>
+        <footer role="contentinfo">
+            <a href="#top" aria-label="Go back to the top">Back to Top</a>
+            <p role="paragraph">Copyright &copy; 2022 Pâtisserie Classique. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
