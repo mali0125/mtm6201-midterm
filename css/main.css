@@ -1,0 +1,284 @@
+/************ MOBILE LAYOUT STARTS HERE ************/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin: 0;
+}
+
+h1 {
+    /* An artistic/distinctive handwritten font was selected for the main heading in order to draw the user's attention, and to match the theme and logo of the website as well */
+    font-family: 'Luxurious Script', cursive;
+    font-size: 50px;
+    font-weight: 100;
+    margin: 0;
+}
+
+h2 {
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 200;
+    color: #890a00;
+}
+
+/* The skip links have been styled to match the theme of this website */
+
+.skip-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.skip-links a {
+    text-decoration: none;
+    position: absolute;
+    background-color: #890a00;
+    color: #ffffff;
+    top: -3em;
+}
+
+.skip-links a:focus {
+    top: 0;
+    padding: 2px 30px;
+}
+
+.container {
+    background-color: #ecdbc8;
+}
+
+header img {
+    width: 100%;
+}
+
+.logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+}
+
+#logo {
+    position: absolute;
+    margin-top: 7.3%;
+    z-index: 1;
+    width: 65%;
+}
+
+/* For mobile screens, the navigation is displayed in a vertical orientation to enhance user experience */
+
+nav {
+    margin-top: -1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    background-color: #890a00;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:visited {
+    background-color: #400400;
+}
+
+/* An animation has been added to the navigation items in order to create a more engaging experience for users */
+
+nav a:hover {
+    transition-property: all;
+    transition-duration: 0.27s;
+    transition-timing-function: ease-out;
+    background-color: #a67c52;
+    transform: scale(1.2);
+    box-shadow: #000000 0px 4px 15px;
+}
+
+nav a:active {
+    background-color: #ffffff;
+    color: #890a00;
+}
+
+main {
+    padding: 5px 30px;
+}
+
+article img {
+    width: 100%;
+}
+
+.services {
+    margin-bottom: 30px;
+}
+
+.services img {
+    width: 100%;
+}
+
+/* Another animation has been added to the buttons so that a user feels compelled to learn more about the products that are offered  */
+
+.services a {
+    background-color: #6b4f4b;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 21px;
+    padding: 10px 30px;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+.services a:hover {
+    animation: shake 0.4s infinite alternate;
+}
+
+#visit {
+    list-style: none;
+    padding-left: 0;
+}
+
+.products li {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.products span {
+    font-style: italic;
+}
+
+footer {
+    background-color: #890a00;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px;
+}
+
+footer a {
+    background-color: #ecdbc8;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 3px 40px;
+    margin-bottom: 20px;
+}
+
+footer a:hover {
+    background-color: #f7dea2;
+}
+
+/************ DESKTOP LAYOUT STARTS HERE ************/
+
+@media screen and (min-width:760px) {
+
+body {
+    background-color: #6b4f4b;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.container {
+    background-color: #ecdbc8;
+    width: 760px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.logo {
+    width: 450px;
+    
+}
+
+#logo {
+    margin-top: 65px;
+    width: 450px;
+}
+
+/* To improve user experience, the navigation items are displayed in a horizontal orientation for desktop screens */
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li a {
+    padding: 10px 30px;
+    margin: 1px;
+}
+
+.services img {
+    height: 200px;
+}
+
+.services h2 {
+    margin: 0 15px;
+}
+
+.services p {
+    margin: 15px;
+}
+
+.services a {
+    margin: 0 15px;
+    width: 150px;
+}
+
+/* Since there is more space on desktop screens, the homepage's images, sub-headings, descriptions, and buttons will all be displayed in a grid for a better user experience */
+
+.services :nth-child(1) { grid-area: b1; }
+.services :nth-child(2) { grid-area: b2; }
+.services :nth-child(3) { grid-area: b3; }
+.services :nth-child(4) { grid-area: b4; }
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: 
+    "b1 b1 b2 b2 b2 b2"
+    "b1 b1 b3 b3 b3 b3"
+    "b1 b1 b3 b3 b3 b3"
+    "b1 b1 b3 b3 b3 b3"
+    "b1 b1 b4 b4 b4 b4"
+    ;
+}
+
+/* The images from the About and Cakes/Pastries pages will be displayed next to the body text. There is more space on desktop screens, so this is an efficient use of space that will also enhance the user experience */
+
+article img {
+    float: left;
+    width: 300px;
+    height: 200px;
+    margin: 0 15px 15px 0;
+}
+
+article p {
+    margin-top: -5px;
+    margin-bottom: 30px;
+}
+
+}
