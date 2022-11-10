@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mali0125 - Midterm Project</title>
+    <!-- Links a handwriting Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+    <!-- Links a CSS stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Creates skip links to improve accessibility, and provide a better user experience for everyone -->
+        <ul role="list" class="skip-links">
+            <li role="listitem"><a href="#nav" aria-label="Skip to the main navigation">Skip to main nav</a></li>
+            <li role="listitem"><a href="#main" aria-label="Skip to the main content">Skip to main content</a></li>
+        </ul>
+        <header role="banner">
+            <!-- Creates a div for the logo so that it can be centered -->
+            <div class="logo">
+                <picture>
+                    <source
+                        srcset=
+                            "images/logo-320_x_208.png,
+                            images/logo-640_x_417.png 2x"
+                        media="(max-width: 320px)"/>
+                    <source
+                        srcset=
+                            "images/logo-720_x_470.png,
+                            images/logo-1440_x_939.png 2x"
+                        media="(max-width: 720px)"/>
+                    <source
+                        srcset=
+                            "images/logo-1280_x_834.png,
+                            images/logo-2560_x_1669.png 2x"
+                        media="(min-width: 1280px)"/>
+                    <source
+                        srcset=
+                            "images/logo-960_x_625.png,
+                            images/logo-1920_x_1252.png 2x"
+                        media="(min-width: 960px)"/>
+                     <!-- Creates an id for the logo to specify its' position and allow it to be displayed on top of the banner image -->
+                    <img 
+                        id=logo 
+                        src="images/logo.png" 
+                        role="img" 
+                        alt="logo">
+                </picture>
+            </div>
+            <picture>
+                <source
+                    srcset=
+                        "images/banner-320_x_180.jpg,
+                        images/banner-640_x_360.jpg 2x"
+                    media="(max-width: 320px)"/>
+                <source
+                    srcset=
+                        "images/banner-720_x_405.jpg,
+                        images/banner-1440_x_810.jpg 2x"
+                    media="(max-width: 720px)"/>
+                <source
+                    srcset=
+                        "images/banner-1280_x_720.jpg,
+                        images/banner-2560_x_1440.jpg 2x"
+                    media="(min-width: 1280px)"/>
+                <source
+                    srcset=
+                        "images/banner-960_x_540.jpg,
+                        images/banner-1920_x_1080.jpg 2x"
+                    media="(min-width: 960px)"/>        
+                <img 
+                    src="images/banner.jpg" 
+                    role="img" 
+                    alt="site banner displaying bread">
+            </picture>
+            <nav role="navigation" id="nav">
+                <ul role="list">
+                    <li role="listitem"><a href="index.html" aria-label="View the Home page">Home</a></li>
+                    <li role="listitem"><a href="about.html" aria-label="View the About page">About</a></li>
+                    <li role="listitem"><a href="cakes.html" aria-label="View the Cakes/Pastries page">Cakes/Pastries</a></li>
+                    <li role="listitem"><a href="#" aria-label="View the Biscuits page">Biscuits</a></li>
+                    <li role="listitem"><a href="#" aria-label="View the Bread page">Bread</a></li>
+                    <li role="listitem"><a href="#" aria-label="View the Contact page">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main role="main" id="main">
+            <article role="article">
+                <h1 role="heading">Cakes & Pastries</h1>
+                <picture>
+                    <source
+                        srcset=
+                            "images/cakes-320_x_213.jpg,
+                            images/cakes-640_x_426.jpg 2x"
+                        media="(max-width: 320px)"/>
+                    <source
+                        srcset=
+                            "images/cakes-720_x_480.jpg,
+                            images/cakes-1440_x_960.jpg 2x"
+                        media="(max-width: 720px)"/>
+                    <source
+                        srcset=
+                            "images/cakes-1280_x_853.jpg,
+                            images/cakes-2560_x_1706.jpg 2x"
+                        media="(min-width: 1280px)"/>
+                    <source
+                        srcset=
+                            "images/cakes-960_x_640.jpg,
+                            images/cakes-1920_x_1280.jpg 2x"
+                        media="(min-width: 960px)"/>
+                    <img 
+                        src="images/cakes.jpg" 
+                        role="img" 
+                        alt="croissants in a basket">
+                </picture>
+                <p role="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laudantium eos commodi aperiam facilis nobis deserunt voluptate quaerat impedit at? Odio magni rerum, repellendus nulla modi animi natus veritatis tempore. Sequi laudantium eos commodi aperiam facilis nobis deserunt voluptate quaerat impedit at? Odio magni rerum, repellendus nulla modi animi natus veritatis tempore.</p>
+                <!-- The Popular Cakes and Popular Pastries are displayed in two short and concise lists, rather than a paragraph, in order to draw the user's attention to this information -->
+                <h2 role="heading">Popular Cakes</h2>
+                <ul class="products" itemscope itemtype="https://schema.org/Thing">
+                    <li itemprop="name">Chocolate cake</li>
+                        <span itemprop="alternateName">(aka Fudge Supreme)</span>
+                    <li itemprop="name">Vanilla cake</li>
+                        <span itemprop="alternateName">(aka Ivory Deluxe)</span>
+                    <li itemprop="name">Banana cake</li>
+                        <span itemprop="alternateName">(aka Sunny Surprise)</span>
+                </ul>
+                <h2 role="heading">Popular Pastries</h2>
+                <ul class="products" itemscope itemtype="https://schema.org/Thing">
+                    <li itemprop="name">Strawberry Pastry</li>
+                        <span itemprop="alternateName">(aka Pink Essence)</span>
+                    <li itemprop="name">Orange Pastry</li>
+                        <span itemprop="alternateName">(aka Sunset Bliss)</span>
+                    <li itemprop="name">Kiwi Pastry</li>
+                        <span itemprop="alternateName">(aka Green Delight)</span>
+                </ul>
+                <p role="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laudantium eos commodi aperiam facilis nobis deserunt voluptate quaerat impedit at? Odio magni rerum, repellendus nulla modi animi natus veritatis tempore.</p>
+            </article>
+        </main>
+        <footer role="contentinfo">
+            <a href="#top" aria-label="Go back to the top">Back to Top</a>
+            <p role="paragraph">Copyright &copy; 2022 Pâtisserie Classique. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
